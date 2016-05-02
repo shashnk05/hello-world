@@ -1,0 +1,151 @@
+Node JS
+
+manoj@manoj-HP-202-G2-MT:~$ npm link express
+unbuild express@4.13.4
+/home/manoj/node_modules/express -> /home/manoj/.nvm/v0.11.13/lib/node_modules/express
+
+=================================================================================================
+
+installation steps and guide
+=============================
+
+https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-an-ubuntu-14-04-server
+http://cwbuecheler.com/web/tutorials/2014/restful-web-app-node-express-mongodb/
+https://github.com/cwbuecheler/node-tutorial-2-restful-app	
+http://cwbuecheler.com/web/tutorials/2013/node-express-mongo/
+
+
+http://keystonejs.com/ ================== good for cms and all
+http://noeticforce.com/best-nodejs-frameworks-for-web-and-app-development
+https://www.devsaran.com/blog/10-best-nodejs-frameworks-developers	
+https://www.mongodb.com/blog/post/building-your-first-application-mongodb-creating-rest-api-using-mean-stack-part-1
+http://adrianmejia.com/blog/2014/10/01/creating-a-restful-api-tutorial-with-nodejs-and-mongodb/
+https://stormpath.com/blog/build-nodejs-express-stormpath-app/
+http://cwbuecheler.com/web/tutorials/2014/restful-web-app-node-express-mongodb/
+
+
+
+
+Node Version Manager
+Usage:
+    nvm help                    Show this message
+    nvm --version               Print out the latest released version of nvm
+    nvm install [-s] <version>  Download and install a <version>, [-s] from source. Uses .nvmrc if available
+    nvm uninstall <version>     Uninstall a version
+    nvm use <version>           Modify PATH to use <version>. Uses .nvmrc if available
+    nvm run <version> [<args>]  Run <version> with <args> as arguments. Uses .nvmrc if available for <version>
+    nvm current                 Display currently activated version
+    nvm ls                      List installed versions
+    nvm ls <version>            List versions matching a given description
+    nvm ls-remote               List remote versions available for install
+    nvm deactivate              Undo effects of NVM on current shell
+    nvm alias [<pattern>]       Show all aliases beginning with <pattern>
+    nvm alias <name> <version>  Set an alias named <name> pointing to <version>
+    nvm unalias <name>          Deletes the alias named <name>
+    nvm copy-packages <version> Install global NPM packages contained in <version> to current version
+    nvm unload                  Unload NVM from shell
+
+Example:
+    nvm install v0.10.24        Install a specific version number
+    nvm use 0.10                Use the latest available 0.10.x release
+    nvm run 0.10.24 myApp.js    Run myApp.js using node v0.10.24
+    nvm alias default 0.10.24   Set default node version on a shell
+
+Note:
+    to remove, delete, or uninstall nvm - just remove ~/.nvm, ~/.npm, and ~/.bower folders
+
+
+=================================================================================================================================================
+
+NPM(1)                                                                                                                                                           NPM(1)
+
+NAME
+       npm -- node package manager
+
+SYNOPSIS
+       npm <command> [args]
+
+VERSION
+       1.4.9
+
+DESCRIPTION
+       npm  is  the  package  manager for the Node JavaScript platform.  It puts modules in place so that node can find them, and manages dependency conflicts intelli‐
+       gently.
+       It is extremely configurable to support a wide variety of use cases.  Most commonly, it is used to publish, discover, install, and develop node programs.
+       Run npm help to get a list of available commands.
+
+INTRODUCTION
+       You probably got npm because you want to install stuff.
+       npm help Use npm install blerg to install the latest version of "blerg".  Check out npm-install for more info.  It can do a lot of stuff.
+       Use the npm search command to show everything that´s available.  Use npm ls to show everything you´ve installed.
+
+DIRECTORIES
+       npm help  See npm-folders to learn about where npm puts stuff.
+       In particular, npm has two modes of operation:
+       ·   global mode:
+           npm installs packages into the install prefix at prefix/lib/node_modules and bins are installed in prefix/bin.
+       ·   local mode:
+           npm installs packages into the current project directory, which defaults to the current working directory.  Packages are installed  to  ./node_modules,  and
+           bins are installed to ./node_modules/.bin.
+       Local mode is the default.  Use --global or -g on any command to operate in global mode instead.
+
+DEVELOPER USAGE
+       If you´re using npm to develop and publish your code, check out the following help topics:
+       ·   json: npm help  Make a package.json file.  See package.json.
+       ·   link: For linking your current working code into Node´s path, so that you don´t have to reinstall every time you make a change.  Use npm link to do this.
+       ·   install:  It´s  a  good idea to install things if you don´t need the symbolic link.  Especially, installing other peoples code from the registry is done via
+           npm install
+       ·   adduser: Create an account or log in.  Credentials are stored in the user config file.
+       ·   publish: Use the npm publish command to upload your code to the registry.
+
+CONFIGURATION
+       npm is extremely configurable.  It reads its configuration options from 5 places.
+       ·   Command line switches:
+           Set a config with --key val.  All keys take a value, even if they are booleans (the config parser doesn´t know what the options are at the time of parsing.)
+           If no value is provided, then the option is set to boolean true.
+       ·   Environment Variables:
+           Set any config by prefixing the name in an environment variable with npm_config_.  For example, export npm_config_key=val.
+       ·   User Configs:
+           The  file at $HOME/.npmrc is an ini-formatted list of configs.  If present, it is parsed.  If the userconfig option is set in the cli or env, then that will
+           be used instead.
+       ·   Global Configs:
+           The file found at ../etc/npmrc (from the node executable, by default this resolves to /usr/local/etc/npmrc) will be parsed if it is found.  If  the  global
+           config option is set in the cli, env, or user config, then that file is parsed instead.
+       ·   Defaults:
+           npm´s default configuration options are defined in lib/utils/config-defs.js.  These must not be changed.
+
+	    npm help  See npm-config for much much more information.
+
+CONTRIBUTIONS
+       Patches welcome!
+       ·   code: npm help  Read through npm-coding-style if you plan to submit code.  You don´t have to agree with it, but you do have to follow it.
+       ·   docs: If you find an error in the documentation, edit the appropriate markdown file in the "doc" folder.  (Don´t worry about generating the man page.)
+
+       Contributors are listed in npm´s package.json file.  You can view them easily by doing npm view npm contributors.
+       If you would like to contribute, but don´t know what to work on, check the issues list or ask on the mailing list.
+
+       ·   http://github.com/npm/npm/issues
+       ·   npm-@googlegroups.com
+
+BUGS
+       When you find issues, please report them:
+       ·   web: http://github.com/npm/npm/issues
+       ·   email: npm-@googlegroups.com
+
+       Be sure to include all of the output from the npm command that didn´t work as expected.  The npm-debug.log file is also helpful to provide.
+       You can also look for isaacs in #node.js on irc://irc.freenode.net.  He will no doubt tell you to put the output in a gist or email.
+
+AUTHOR
+       Isaac Z. Schlueter http://blog.izs.me/ :: isaacs https://github.com/isaacs/ :: @izs http://twitter.com/izs :: i@izs.me
+
+SEE ALSO
+       ·   npm help help
+       ·   npm help  faq
+       ·   README
+       ·   npm help  package.json
+       ·   npm help install
+       ·   npm help config
+       ·   npm help  config
+       ·   npm help  npmrc
+       ·   npm help  index
+       ·   npm apihelp npm
